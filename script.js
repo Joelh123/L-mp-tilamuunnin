@@ -15,7 +15,7 @@ function muunnaLampotila() {
         let pyoristetty = Math.round(celciusFahrenheit * 10) / 10
         const fixed = pyoristetty.toFixed(valittuDesimaali)
         document.getElementById("tulos-print").innerHTML = `${muunnettava} Celcius astetta on:`
-        document.getElementById("palautus").innerHTML = `${fixed}°F` 
+        document.getElementById("palautus").innerHTML = `${fixed}°F`
     } 
 
     if (muunnos == "f-to-c") {
