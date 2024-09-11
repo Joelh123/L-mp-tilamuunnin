@@ -1,0 +1,23 @@
+h1 {
+    padding-top: 5%;
+}
+
+.viiva {
+    border: 1px solid black;
+}
+
+.suurempi {
+    font-size: larger
+}
+
+.syote {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1%;
+}
+
+.virhe {
+    color: red;
+    margin: 0px;
+}
