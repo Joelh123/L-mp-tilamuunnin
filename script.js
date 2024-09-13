@@ -8,19 +8,17 @@ function muunnaLampotila() {
     }
     const muunnos = document.getElementById("yksikko").value;
     const valittuDesimaali = document.querySelector('input[name="desimaalit"]:checked').value;
-    let celciusFahrenheit = (muunnettava) * 1.8 + 32
-    let fahrenheitCelcius =  (muunnettava - 32) / 1.8
+    let celciusFahrenheit = (((muunnettava) * 1.8 + 32) * 10) / 10
+    let fahrenheitCelcius =  (((muunnettava - 32) / 1.8) * 10) / 10
 
     if (muunnos == "c-to-f") {
-        let pyoristetty = Math.round(celciusFahrenheit * 10) / 10
-        const fixed = pyoristetty.toFixed(valittuDesimaali)
+        const fixed = celciusFahrenheit.toFixed(valittuDesimaali)
         document.getElementById("tulos-print").innerHTML = `${muunnettava} Celcius astetta on:`
         document.getElementById("palautus").innerHTML = `${fixed}°F`
     } 
 
     if (muunnos == "f-to-c") {
-        let pyoristetty = Math.round(fahrenheitCelcius * 10) / 10
-        const fixed = pyoristetty.toFixed(valittuDesimaali)
+        const fixed = fahrenheitCelcius.toFixed(valittuDesimaali)
         document.getElementById("tulos-print").innerHTML = `${muunnettava} Fahrenheit astetta on:`
         document.getElementById("palautus").innerHTML = `${fixed}°C` 
     }
