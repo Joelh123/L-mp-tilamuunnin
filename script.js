@@ -1,6 +1,6 @@
 function muunnaLampotila() {
     let muunnettava = document.getElementById("lampotila").value;
-    if (isNaN(muunnettava) || muunnettava == "" || muunnettava <= -273.15) {
+    if (isNaN(muunnettava) || muunnettava == "" || muunnettava < -273.15) {
         document.getElementById("virhe").innerHTML = "Virheellinen syöte"
         return
     } else {
